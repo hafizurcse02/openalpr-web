@@ -17,7 +17,7 @@ class MainHandler(tornado.web.RequestHandler):
                 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> 
                 <body>
                     <h2>Tesseract Web Service</h2>
-                    <form name="mainForm" id="mainForm" action="" method="POST" enctype="multipart/form-data">
+                    <form name="mainForm" id="mainForm" action="/alpr" method="POST" enctype="multipart/form-data">
                         Target image: <input type="file" id="image" name="image" size="80" />
                         <input id="submitBtn" type="submit" value="Submit" />
                     </form>
