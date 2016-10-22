@@ -18,7 +18,7 @@ class MainHandler(tornado.web.RequestHandler):
                 <body>
                     <h2>Tesseract Web Service</h2>
                     <form name="mainForm" id="mainForm" action="" method="POST" enctype="multipart/form-data">
-                        Target image url: <input type="text" id="image" name="image" size="80" />
+                        Target image: <input type="file" id="image" name="image" size="80" />
                         <input id="submitBtn" type="submit" value="Submit" />
                     </form>
                     <div id="result"></div>
