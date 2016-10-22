@@ -1,4 +1,4 @@
-FROM python:3
+FROM python:2
 
 RUN apt-get -y update && \
     apt-get -y install curl wget libopencv-dev libtesseract-dev git cmake build-essential libleptonica-dev liblog4cplus-dev libcurl3-dev beanstalkd && \
