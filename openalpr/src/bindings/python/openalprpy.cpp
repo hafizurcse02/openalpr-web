@@ -6,7 +6,7 @@
 
 extern "C" {
   
-#if defined(_MSC_VER)
+#if defined(WIN32)
     //  Microsoft 
     #define OPENALPR_EXPORT __declspec(dllexport)
 #else
@@ -96,6 +96,22 @@ extern "C" {
       return membuffer;
     }
 
+  OPENALPR_EXPORT void setCountry(Alpr* nativeAlpr, char* ccountry)
+    {
+      // Convert strings from java to C++ and release resources
+      std::string country(ccountry);
+
+      nativeAlpr->setCountry(country);
+    }
+  
+  OPENALPR_EXPORT void setPrewarp(Alpr* nativeAlpr, char* cprewarp)
+    {
+      // Convert strings from java to C++ and release resources
+      std::string prewarp(cprewarp);
+
+      nativeAlpr->setPrewarp(prewarp);
+    }
+  
   OPENALPR_EXPORT void setDefaultRegion(Alpr* nativeAlpr, char* cdefault_region)
     {
       // Convert strings from java to C++ and release resources
